@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e3ab93681d44ccda3d1a1f511b8f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 668693398}
   shellSound: {fileID: 8300000, guid: d7d1e60d5d39b48ccbd11ea4529b678a, type: 3}
 --- !u!114 &61812851
 MonoBehaviour:
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6f606f78d3b476f87b82921e3d3e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 668693398}
   restartSound: {fileID: 8300000, guid: b99a1bf4d4e644bad94ace8c9097222a, type: 3}
 --- !u!61 &622766478
 BoxCollider2D:
@@ -1214,7 +1214,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &668693402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1977,6 +1977,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 129513242}
+  - {fileID: 1563663188}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1563663186
@@ -2056,12 +2057,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563663186}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1325697201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866235797
 GameObject:
@@ -2242,7 +2243,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1563663188}
   - {fileID: 81515202}
   - {fileID: 668693403}
   - {fileID: 582082008}
