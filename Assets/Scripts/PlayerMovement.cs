@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 7f;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
+    private float groundCheckRadius = 1f;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Keyboard.current.aKey.isPressed ? -1 :
                     Keyboard.current.dKey.isPressed ? 1 : 0;
+
+        
 
         jumpInput = Keyboard.current.spaceKey.wasPressedThisFrame;
         jumpInput2 = Keyboard.current.wKey.wasPressedThisFrame;
