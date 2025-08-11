@@ -1,16 +1,25 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Restart : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Collider2D player;
+    [SerializeField] private AudioClip restartSound;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other == player)
+        {
+            StartCoroutine(RestartAfterSound());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator RestartAfterSound()
     {
-        
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(restartSound);
+        yield return new WaitForSeconds(restartSound.length);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
